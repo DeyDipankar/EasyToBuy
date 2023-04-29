@@ -1,28 +1,36 @@
 import './App.css';
+import CategoryItems from './component/category-item/category-item.component';
 
 function App() {
   const categories = [
-    { 'id': 1, 'name': 'Hats' },
-    { 'id': 2, 'name': 'Jackets' }, ,
-    { 'id': 3, 'name': 'Shoes' }, ,
-    { 'id': 4, 'name': 'Womens' }, ,
-    { 'id': 5, 'name': 'Mens' },
+    {
+      "id": 1,
+      "title": "hats",
+      "imageUrl": "https://i.ibb.co/cvpntL1/hats.png"
+    },
+    {
+      "id": 2,
+      "title": "jackets",
+      "imageUrl": "https://i.ibb.co/px2tCc3/jackets.png"
+    },
+    {
+      "id": 3,
+      "title": "sneakers",
+      "imageUrl": "https://i.ibb.co/0jqHpnp/sneakers.png"
+    },
+    {
+      "id": 4,
+      "title": "womens",
+      "imageUrl": "https://i.ibb.co/GCCdy8t/womens.png"
+    },
+    {
+      "id": 5,
+      "title": "mens",
+      "imageUrl": "https://i.ibb.co/R70vBrQ/men.png"
+    }
   ]
   return (
-    <div className='categories-container'>
-      {categories.map(item => {
-        return (
-          <div key={item.id} className="category-container">
-            <div className='category-body-container'>
-              {/* <img></img> */}
-              <h2>{item.name}</h2>
-              <p>Buy now</p>
-            </div>
-          </div>
-        )
-      }
-      )}
-    </div>
+    <CategoryItems categories={categories}/>
   );
 }
 
