@@ -1,36 +1,42 @@
 import './App.css';
-import CategoryItems from './component/category-item/category-item.component';
+import { Routes,Route } from 'react-router-dom';
+import Home from './routes/home/home.component';
+import Navigation from './routes/navigation/navigation.component';
 
+function Shop ()
+{
+  return(
+    <div>Shop</div>
+  )
+}
+function Contact ()
+{
+  return(
+    <div>Contact</div>
+  )
+}
+function SignIn ()
+{
+  return(
+    <div>SignIn</div>
+  )
+}
+
+/*Note :  
+- When using index, that Route was set as index page
+- When using index, no need to mention the path = ''
+- The Header/Footer/Navigation like elements should have outlet, in order to show their child components. e.g. <Navigation /> > <Home />
+*/
 function App() {
-  const categories = [
-    {
-      "id": 1,
-      "title": "hats",
-      "imageUrl": "https://i.ibb.co/cvpntL1/hats.png"
-    },
-    {
-      "id": 2,
-      "title": "jackets",
-      "imageUrl": "https://i.ibb.co/px2tCc3/jackets.png"
-    },
-    {
-      "id": 3,
-      "title": "sneakers",
-      "imageUrl": "https://i.ibb.co/0jqHpnp/sneakers.png"
-    },
-    {
-      "id": 4,
-      "title": "womens",
-      "imageUrl": "https://i.ibb.co/GCCdy8t/womens.png"
-    },
-    {
-      "id": 5,
-      "title": "mens",
-      "imageUrl": "https://i.ibb.co/R70vBrQ/men.png"
-    }
-  ]
   return (
-    <CategoryItems categories={categories}/>
+    <Routes>
+      <Route path='/' element={<Navigation />}>
+          <Route index  element={<Home />} />
+          <Route path='shop' element={<Shop />} />
+          <Route path='contact' element={<Contact />} />
+          <Route path='signin' element={<SignIn />} />
+      </Route>
+    </Routes>
   );
 }
 
