@@ -2,6 +2,7 @@ import './App.css';
 import { Routes,Route } from 'react-router-dom';
 import Home from './routes/home/home.component';
 import Navigation from './routes/navigation/navigation.component';
+import SignIn from './routes/sign-in/sign-in.component';
 
 function Shop ()
 {
@@ -15,12 +16,7 @@ function Contact ()
     <div>Contact</div>
   )
 }
-function SignIn ()
-{
-  return(
-    <div>SignIn</div>
-  )
-}
+
 
 /*Note :  
 - When using index, that Route was set as index page
@@ -34,7 +30,7 @@ function App() {
           <Route index  element={<Home />} />
           <Route path='shop' element={<Shop />} />
           <Route path='contact' element={<Contact />} />
-          <Route path='signin' element={<SignIn />} />
+          <Route path='signIn' element={<SignIn />} />
       </Route>
     </Routes>
   );

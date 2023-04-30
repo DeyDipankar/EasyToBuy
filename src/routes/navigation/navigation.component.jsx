@@ -18,7 +18,7 @@ function Navigation ()
             <Link className="nav-link" to={'/contact'}>
                 CONTACT
             </Link>
-            <Link className="nav-link" to={'/signin'}>
+            <Link className="nav-link" to={'/signIn'}>
                 SIGN IN
             </Link>
         </div>
