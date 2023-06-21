@@ -7,7 +7,9 @@ import SignIn from './routes/sign-in/sign-in.component';
 function Shop ()
 {
   return(
+    <>
     <div>Shop</div>
+    </>
   )
 }
 function Contact ()
@@ -24,6 +26,7 @@ function Contact ()
 - The Header/Footer/Navigation like elements should have outlet, in order to show their child components. e.g. <Navigation /> > <Home />
 */
 function App() {
+  //here index implies the route to consider for path "/"
   return (
     <Routes>
       <Route path='/' element={<Navigation />}>
