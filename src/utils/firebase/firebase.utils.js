@@ -8,7 +8,7 @@ import { getFirestore, doc, getDoc, setDoc } from "firebase/firestore"
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyDqqDZF5EReXaZCIF_WLe9FmPQcC27ylbI",
+  apiKey: "xxxxxxxxxxxxxxxxxxxxxxxxxx",
   authDomain: "react-easytobuy.firebaseapp.com",
   projectId: "react-easytobuy",
   storageBucket: "react-easytobuy.appspot.com",
